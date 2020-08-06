@@ -1,0 +1,78 @@
+<!-- Cabezera  -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chek-in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contenido -->
+<ion-content padding>
+  <!-- Formulario -->
+
+<!-- Reserva -->
+  <ion-item>
+    <ion-label position="floating">
+      No. de reserva
+      <ion-text color="danger" >*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formulario.reserva" required pattern="[0-9]{0,5}"></ion-input>
+  </ion-item>
+
+<!-- Nombre -->
+  <ion-item>
+    <ion-label position="floating">
+      Nombres
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formulario.nombre" required pattern="[a-zA-Z ]{0,20}"></ion-input>
+  </ion-item>
+
+<!-- Apellidos -->
+  <ion-item>
+    <ion-label position="floating">
+      Apellidos
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formulario.apellidos" required pattern="[a-zA-Z ]{0,50}"></ion-input>
+  </ion-item>
+
+<!-- Ubicacion -->
+  <ion-item>
+    <ion-label position="floating">
+      Ciudad / Pais
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formulario.ubicacion" required pattern="[a-zA-Z0-9 ]+[/-]+[a-zA-Z0-9 ]{0,100}"></ion-input>
+  </ion-item>
+
+<!-- Direccion -->
+  <ion-item>
+    <ion-label position="floating">
+      Direccion
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formulario.direccion" required pattern="[a-zA-Z0-9 -]{0,100}"></ion-input>
+  </ion-item>
+
+<!-- Telefono -->
+  <ion-item>
+    <ion-label position="floating">
+      Telefono
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formulario.telefono" required pattern="[0-9 -]{0,20}"></ion-input>
+  </ion-item>
+
+<!-- Boton -->
+  <ion-footer>
+    <ion-toolbar>
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin" (click)="(saveInfo())">
+          Registrar
+          <ion-icon slot="end" name="create"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>

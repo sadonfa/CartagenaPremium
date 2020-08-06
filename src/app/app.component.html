@@ -1,4 +1,4 @@
-<ion-app>
+<!-- <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
@@ -12,8 +12,8 @@
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-
+        </ion-list> -->
+<!-- Aqui estaba comentado desde antes -->
         <!-- <ion-list id="labels-list">
           <ion-list-header>Labels</ion-list-header>
 
@@ -22,8 +22,79 @@
             <ion-label>{{ label }}</ion-label>
           </ion-item>
         </ion-list> -->
-      </ion-content>
+<!-- Aqui terminaba el tema comentado -->
+      <!-- </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
+</ion-app> -->
+
+
+<ion-app>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Cartagena Premium</ion-title>
+        <ion-note>info@cartagenapremium.com</ion-note>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+
+      <!-- Menu principal -->
+      <ion-list>
+        
+        <ion-menu-toggle>
+          <ion-item routerLink="/inicio">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Inicio</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/inicio-de-sesion">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Inicio de sesion</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/tutorial">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Tutorial</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/buscar">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Buscar</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/pagar">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Pagar</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/cancelar">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Cancelar</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/cerrar">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Cerrar</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

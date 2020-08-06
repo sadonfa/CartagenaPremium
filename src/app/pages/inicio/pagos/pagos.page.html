@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pagos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<!-- Formulario -->
+
+<!-- No. reserva -->
+  <ion-item>
+    <ion-label position="floating">
+      No. de reserva
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formPago.reserva" required></ion-input>
+  </ion-item>
+
+<!-- No. tarjeta -->
+  <ion-item>
+    <ion-label position="floating">
+      No. de Tarjeta
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formPago.tarjeta" required></ion-input>
+  </ion-item>
+
+<!-- Fecha -->
+  <ion-item>
+    <ion-label position="floating">
+      MM/DD
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formPago.fecha" required></ion-input>
+  </ion-item>
+
+<!-- CVC -->
+  <ion-item>
+    <ion-label position="floating">
+      CVC
+      <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input [(ngModel)]="formPago.cvc" required></ion-input>
+  </ion-item>
+
+<!-- Boton -->
+  <ion-footer>
+    <ion-toolbar>
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin" (click)="(savePago())">
+          Pagar
+          <ion-icon slot="end" name="create"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>
